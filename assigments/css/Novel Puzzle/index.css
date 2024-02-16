@@ -1,0 +1,7 @@
+span {
+text-transform: uppercase;
+}
+
+p::first-letter {
+    font-size: 200px;
+}
