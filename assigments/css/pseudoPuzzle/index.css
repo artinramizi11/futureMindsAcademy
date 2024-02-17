@@ -1,0 +1,7 @@
+p:hover {
+    background-color: #565454;
+}
+
+p::first-letter {
+    font-size: 30px;
+}
