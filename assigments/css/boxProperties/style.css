@@ -1,0 +1,19 @@
+p img {
+    width: 100px;
+    float: left;
+    border: 2px solid black;
+    margin-top: 10px;
+}
+
+p {
+    padding: 10px;
+    width: 100%;
+    background-color: wheat;
+    border: 2px solid black;
+}
+
+p img:hover {
+    border: 2px dashed black;
+    padding: 10px;
+    margin: 5px;
+}
