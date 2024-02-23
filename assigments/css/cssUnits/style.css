@@ -1,0 +1,47 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.div1 {
+    background-color: rgb(76, 67, 67);
+    height: 25vh;
+    color:white;
+    margin: 10px;
+}
+
+.div1 h1,p {
+    font-size: 1.5em;
+}
+
+.div1 hr {
+    border: 2px solid red;
+    width: 33%;
+    margin-left: 200px;
+    margin-top: 30px;
+}
+
+.div1 h1 {
+    text-decoration-line: underline;
+}
+
+.div2 {
+    background-color: rgb(227, 133, 133);
+    height: 25vh;
+    color:white;
+    margin: 10px;
+
+}
+
+.div2 h1,p {
+    font-size: 1.5em;
+}
+.div2 hr {
+    border: 2px solid red;
+    width: 33%;
+    margin-left: 200px;
+    margin-top: 30px;
+}
+
+.div2 h1 {
+    text-decoration-line: underline;
+}
