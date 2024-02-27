@@ -3,7 +3,7 @@
     margin: 0px;
     text-decoration: none;
     list-style-type: none;
-    cursor: pointer;
+cursor: url("./images/cursor-02.svg") 1 1, pointer;
 }
 
 /* Globals */
@@ -36,6 +36,9 @@
 .colorWhite {
     color: white;
 }
+.dInline {
+    display: inline;
+}
 
 .navbutton {
     border-radius: 12px;
@@ -50,20 +53,9 @@
 .headerHome {
 padding: 10px;
 }
-.navbar {
-    position: relative;
-height: 100px; 
-}
-.myproject, .home {
 
-    position: absolute;
-    top: 30px;
-    right: 52%;
-}
-.contactme, .myprojects {
-    position: absolute;
-    top: 30px;
-    right: 42%;
+.navbar {
+    margin: 20px;
 }
 
 /* Main */
