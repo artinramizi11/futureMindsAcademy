@@ -1,0 +1,107 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+
+/* Globals */
+
+.hoverBlue:hover {
+    background-color: blue;
+}
+.centertext {
+    text-align: center;
+}
+.bgYellow {
+    background-color: yellow;
+}
+
+.bgBlue {
+    background-color: blue;
+}
+.bgOrange {
+    background-color: orange;
+}
+
+.bgRed {
+    background-color: red;
+}
+
+.bgAqua {
+    background-color: aqua;
+}
+
+.colorWhite {
+    color: white;
+}
+
+.navbutton {
+    border-radius: 12px;
+    background-color: rgb(103, 103, 239);
+    color: white;
+    padding: 10px;
+
+}
+
+/* Header */
+
+.headerHome {
+padding: 10px;
+}
+.inline {
+    display: inline;
+}
+
+.navbar {
+    position: relative;
+height: 100px; 
+}
+.myproject, .home {
+
+    position: absolute;
+    top: 30px;
+    right: 52%;
+}
+.contactme, .myprojects {
+    position: absolute;
+    top: 30px;
+    right: 42%;
+}
+
+/* Main */
+
+body {
+    margin: 0px 120px;
+    background-image: url(images/spread_august_BLUE_1445x.webp);
+}
+
+hr {
+    border: 2px solid black;
+}
+body {
+    padding: 10px;
+}
+.card {
+    border-radius: 25px;
+    border: 3px solid transparent;
+    margin: 10px;
+    padding: 10px;
+}
+.card:hover {
+    border: 3px solid black;
+}
+
+.card .primarySchool, .highschool, .university {
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: white;
+}
+
+table {
+    border-collapse: collapse;
+}
