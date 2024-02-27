@@ -5,8 +5,6 @@
     list-style-type: none;
     cursor: pointer;
 }
-
-
 /* Globals */
 
 .hoverBlue:hover {
@@ -51,10 +49,6 @@
 .headerHome {
 padding: 10px;
 }
-.inline {
-    display: inline;
-}
-
 .navbar {
     position: relative;
 height: 100px; 
