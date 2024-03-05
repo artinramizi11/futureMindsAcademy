@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Globals */
+
+.colorBlue {
+    color: blue;
+}
+
+.bgGreen {
+    background-color: green;
+}
+
+.bgBlue {
+    background-color: blue;
+}
+/* ASIDE */
+
+aside {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 280px;
+    height: 100vh;
+    background-color: rgb(109, 109, 110);
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right: 20px;
+}
+
+.text h1 {
+    color: white;
+}
+.text h2 {
+    color: rgb(190, 185, 185);
+}
+
+.text button {
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* MAIN  */
+
+main {
+    display: flex;
+}
+
+section {
+    padding: 40px;
+    background-color: rgb(234, 234, 243);
+    width: 100%;
+}
+.breakline {
+    color: gray;
+    border-bottom: 2px solid gray;
+}
+
+.breakline h4{
+    padding: 5px;
+}
+.titleAndLogo {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+}
+.logo img{
+border-radius: 100%;
+width: 90px;
+}
+
+.title .description {
+    margin-top: 20px;
+
+}
+.css, .html {
+    color: white;
+    padding: 0px 14px;
+    cursor: pointer;
+}
+
+.pinnedpost, .recentposts {
+    height: 50%;
+}
+
+.javascript {
+    background-color: red;
+    color: white;
+    padding: 0px 10px;
+    cursor: pointer;
+}
