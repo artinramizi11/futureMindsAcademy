@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: green;
+}
+
+.overlap {
+    width: 400px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+
+
+.overlap .overlap-image {
+background: url(images/picture.jpg);
+background-position: center;
+background-size: cover;
+border-radius: 10px;
+border: 3px solid white;
+grid-column: 1 / 3;
+grid-row: 1  /  5;
+}
+
+.overlap-description {
+    grid-row: 2 / 4;
+    grid-column: 2 / 6;
+    display: grid;
+    place-content: center;
+    margin: 0;
+    padding: 10px;
+    background-color: #0000008f;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
