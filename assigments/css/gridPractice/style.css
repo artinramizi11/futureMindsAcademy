@@ -12,29 +12,33 @@ section {
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 section .box1 {
     
 background-color: pink;
-
+grid-column: span 4;
 }
 
 section .box2 {
-    display: grid;
+grid-column: span 4;
+background-color: white;
+display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
-    background-color:rgb(254, 254, 254);
+
 }
 
 section .box3 {
     
 background-color: pink;
+grid-column: span 4;
+}
+
+.box2-box {
+    background-color:green;
 }
 
 
-
-.box2 .firstbox, .second-box , .third-box, .fourth-box{
-    background-color: green;
-}
