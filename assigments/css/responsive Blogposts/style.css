@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Global */
+
+.colorBlue {
+    color: blue;
+}
+
+.bgGreen {
+    background-color: green;
+}
+
+.bgBlue {
+    background-color: blue;
+}
+
+/* Main */
+
+main {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 100vh;
+}
+
+main section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 20px;
+}
+aside {
+    display: grid;
+    align-content: center;
+    justify-items: end;
+    padding: 10px;
+    background-color: rgb(53, 53, 111);
+
+}
+aside h1 {
+    color: white;
+}
+aside h5 {
+    color: gray;
+}
+aside button {
+    background-color: transparent;
+    padding: 10px;
+    border: 2px solid white;
+    margin-top: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Styling Section Pinned Post & Recent Posts */
+
+.box {
+    padding: 20px;
+
+}
+
+.box h1 {
+    font-size: 15px;
+    color: gray;
+}
+
+.box p {
+    font-size: 17px;
+}
+.titleAndLogo {
+display: flex;
+justify-content: space-between;
+margin-top: 20px;
+}
+
+
+
+.logo img {
+border-radius: 50%;
+}
+
+.css {
+    background-color: green;
+    padding: 4px;
+}
+
+.html {
+    background-color: blue;
+    padding: 4px;
+
+}
+
+.javascript {
+    background-color: red;
+    padding: 4px;
+}
+
+@media (max-width:600px) {
+   main {
+    grid-template-columns: 1fr;
+   }
+   .titleAndLogo {
+    flex-direction: column;
+   }
+   
+}
