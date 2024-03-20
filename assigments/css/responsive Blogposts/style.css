@@ -98,11 +98,18 @@ border-radius: 50%;
 }
 
 @media (max-width:600px) {
+   
    main {
     grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr 1fr;
    }
-   .titleAndLogo {
+   aside {
+    height: 200px;
+    display: flex;
     flex-direction: column;
-   }
+    justify-content: center;
+    align-items: center;
+}
+
    
 }
