@@ -1,0 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section img {
+    filter: blur(10px);
+    transition: 1s ease;
+    transition: transform 7s ease .2s;
+    cursor: pointer;
+   
+
+
+}
+
+section img:hover {
+    filter: blur(0px);
+    transform: rotate(720deg);
+
+}
