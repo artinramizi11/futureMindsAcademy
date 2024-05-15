@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+
+<body>
+
+   <main>
+    Num1: <input type="number" id="num1"> <br>
+    Num2: <input type="number" id="num2"> <br> <br>
+
+    <select  id="arithmetic">
+<option value="sum">Add</option>
+<option value="diff">Subtract</option>
+<option value="divide">Divides</option>
+<option value="multiply">Multiply</option>
+    </select> <br>
+
+
+    Result: <h3 id="resultMsg">0</h3>
+    <button onclick="doCalculation();">Calculate</button>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        main button {
+            padding: 10px;
+        }
+    </style>
+   </main>
+
+
+    <script>
+
+        const num1 = document.querySelector("#num1");
+        const num2 = document.querySelector("#num2");
+        const arithmetic = document.querySelector("#arithmetic");
+        const resultMsg = document.querySelector("#resultMsg");
+
+       function calculate(arg, a, b) {
+
+if(arg == "sum") {
+    return a + b;
+}
+
+if(arg == "diff") {
+    return a - b;
+}
+
+if(arg == "divide") {
+    return a / b;
+}
+
+if(arg == "multiply") {
+    return a * b;
+}
+}
+
+   function doCalculation() {
+    console.log("Num1:" + num1.value)
+    console.log("Num2:" + num2.value)
+    console.log(arithmetic.value);
+
+    let finalResult = calculate(arithmetic.value, num1.value, num2.value);
+ 
+    resultMsg.textContent = finalResult;
+   }
+      
+
+    </script>
+    
+</body>
+
+</html>

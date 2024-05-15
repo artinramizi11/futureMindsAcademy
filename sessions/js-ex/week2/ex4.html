@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="ex3.js"></script>
+</head>
+<body>
+    <script>
+        let answer = Math.floor(Math.random() * 20) + 1;
+
+let playerOne = prompt('Player One:');
+let playerTwo = prompt('Player Two:');
+
+if(isNaN(playerOne) || isNaN(playerTwo))
+    throw new Error('Please write only numbers');
+
+
+if((playerOne < 0 || playerOne > 20) || (playerTwo < 0 || playerTwo > 20)) {
+    throw new Error('Only select numbers between 0 - 20');
+}
+
+let playerOneDistance = Math.abs(answer - playerOne);
+let playerTwoDistance = Math.abs(answer - playerTwo);
+
+let winner;
+if(playerOneDistance < playerTwoDistance)
+    winner = 'Player one';
+else 
+winner = 'Player two';
+
+console.log(answer);
+console.log(winner);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3</title>
+</head>
+<body>
+    
+<h2 class="title"></h2>
+<div class="myMap"></div>
+
+<input type="text" id="firstName" placeholder="First Name"> <br>
+<input type="text" id="lastName" placeholder="Last Name"> <br>
+
+<button onclick="doit();">Do it</button>
+
+
+    <script>
+
+        const title = document.querySelector(".title");
+        const myMap = document.querySelector(".myMap");
+
+        const firstName = document.querySelector("#firstName");
+        const lastName = document.querySelector("#lastName");
+
+
+
+        title.innerHTML = "Welcome to Javascript";
+        myMap.innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23403.28162765529!2d20.146522318064022!3d42.84307095370081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1352e63f498a63f7%3A0x9adb1a72efd99f37!2sRozhaj%C3%AB%2C%20Mal%20i%20Zi!5e0!3m2!1ssq!2s!4v1714757353305!5m2!1ssq!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+
+
+  function doit() {
+
+    title.innerHTML += " " + firstName.value + " " + lastName.value;
+    console.log(firstName.value); 
+  }
+
+    </script>
+</body>
+</html>
