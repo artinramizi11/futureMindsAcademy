@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=|, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="title">1</h1>
+
+    <script>
+        const title = document.querySelector('.title');
+      let userInput = prompt('Password');
+      let tries = 0;
+
+while (userInput !== '12341234') {
+    userInput = prompt('Wrong password, try again');
+    tries++;
+}
+alert('Welcome, user!');
+
+
+title.textContent = tries + ' tries';
+    </script>
+</body>
+</html>
