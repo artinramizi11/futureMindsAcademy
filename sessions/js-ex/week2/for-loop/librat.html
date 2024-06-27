@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librat</title>
+</head>
+<body>
+
+    <table border="1" cellpadding="5">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Title</th>
+            </tr>
+        </thead>
+        <tbody id="libraryDate">
+        
+
+        </tbody>
+    </table>
+
+    <script>
+
+        const libraryDate = document.querySelector("#libraryDate");
+
+
+        let library = [
+            'Harry Potter',
+            'It ends with us',
+            'Gu gu pici gu',
+            'Beni ecen vetem',
+            'Kukulla',
+            'Tullumbat e Lulit',
+            'Luli i vocerr',
+            'Medalioni',
+        ];
+
+      for(let i = 0; i < library.length; i++) {
+        libraryDate.innerHTML += ` 
+        <tr>
+            <td>${i}</td>
+            <td>${library[i]}</td>
+
+            </tr>
+        
+        `
+      }
+            
+
+    </script>
+  
+    
+</body>
+</html>

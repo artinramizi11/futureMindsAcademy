@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Differenct Exercises</title>
+</head>
+<body>
+    <style>
+
+    </style>
+
+<ul id="lists">
+    <li>test1</li>
+    <li>test2</li>
+    <li>test3</li>
+    <li>test4</li>
+</ul>    
+
+    <script>
+
+        const lists = document.getElementById('lists');
+
+        for(let i = 0; i<lists.children.length; i++){
+            lists.children[i].addEventListener('click', function(){
+                console.log(i);
+            })
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Label>Enter a number</Label> <br> <input type="number" placeholder="Enter a number" name="" id="numberValue">
+    <p id="numberList"></p>
+    <button id="btnCheck">Check</button>
+    <style>
+        body {
+            padding: 100px;
+        }
+    </style>
+    <script>
+
+let btnCheck = document.getElementById('btnCheck');
+let numberList = document.getElementById('numberList');
+let numberInput = document.getElementById('numberValue');
+
+btnCheck.addEventListener('click', function() {
+    function createArray (N) {
+        let arr = [];
+        for(i=1;i<=N;i++) {
+            arr.push(i);
+        }
+
+        return arr;
+    }
+
+    let N = numberInput.value;
+    numberList.innerHTML = createArray(N);
+});
+
+
+    </script>
+</body>
+</html>    
+

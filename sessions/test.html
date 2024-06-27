@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="numberCount"></p>
+    <button onclick="countDown()">Start counting down</button>
+    <button onclick="stopCountingDown()">Stop Counting Down</button>
+</body>
+
+<script>
+    const number = document.getElementById('numberCount');
+    let count = 15;
+
+number.textContent = count;
+
+function countDown() {
+    let countTime = setInterval(()=>{
+        number.textContent = count;
+        if(count == 0) {
+            clearInterval(countTime);
+        } else {
+            count--;
+        }
+    },1000)
+
+}
+    
+
+
+
+ 
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While loop</title>
+</head>
+<body>
+
+    <h2>While loop</h2>
+    <p id="number"></p>
+
+    <h2>For loop</h2>
+    <p id="number2"></p>
+
+
+<script>
+
+    
+     const number = document.getElementById('number');
+     const number2 = document.getElementById('number2');
+
+     let i = 40;
+
+     while ( i >= 0 ) {
+        number.innerHTML += ` ${i}`;
+        i--;
+     }
+
+     for (let a=40; a>=0; a--) {
+        number2.innerHTML += `${a} `;
+     }
+
+     
+
+
+
+    </script>
+</body>
+</html>

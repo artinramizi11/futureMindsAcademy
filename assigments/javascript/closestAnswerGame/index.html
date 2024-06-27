@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closest Answer Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+   <div class="container">
+    <h1>The correct answer is <span class="result">6</span></h1>
+    <div class="players">
+        <div class="player1">
+            <h1>Player One</h1>
+            <h2 class="thePlayer1">1</h2>
+        </div>
+
+        <div class="player2">
+            <h1>Player Two</h1>
+            <h2 class="thePlayer2">2</h2>
+        </div>
+    </div>
+   </div>
+
+    <script>
+
+let player1 = document.querySelector('.thePlayer1');
+let player2 = document.querySelector('.thePlayer2');
+let result = document.querySelector('.result');
+
+ let answer = Math.floor(Math.random() * 20) + 1;
+
+let playerOne = prompt('Player One:');
+let playerTwo = prompt('Player Two:');
+
+result.textContent = answer;
+player1.textContent = playerOne;
+player2.textContent = playerTwo;
+
+
+
+</script>
+</body>
+</html>

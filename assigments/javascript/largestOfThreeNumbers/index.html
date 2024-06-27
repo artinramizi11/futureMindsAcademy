@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largest of three numbers</title>
+</head>
+<body>
+
+   <label for="">Number 1</label> <input type="text" placeholder="number1" id="number1"> <br> <br>   
+    <label for="">Number 2</label><input type="text" placeholder="number2" id="number2"> <br> <br>
+    <label for="">Number 3</label><input type="text" placeholder="number3" id="number3"> <br> <br>
+    <button id="btnCheck">Check for largest number</button>
+    <p>Results</p>
+    <h1 id="results"></h1>
+
+    <script>
+
+        let number1 = document.getElementById('number1');
+        let number2 = document.getElementById('number2');
+        let number3 = document.getElementById('number3');
+        let btnCheck = document.getElementById('btnCheck');
+        let results = document.getElementById('results');
+
+        function findLargest(num1, num2, num3) {
+    if (num1.value >= num2.value && num1.value >= num3.value) {
+        return num1.value;
+    } else if (num2.value >= num1.value && num2.value >= num3.value) {
+        return num2.value;
+    } else {
+        return num3.value;
+    }
+};
+
+btnCheck.addEventListener('click', function() {
+    results.innerHTML = findLargest(number1,number2,number3);
+})
+
+</script>
+</body>
+</html>

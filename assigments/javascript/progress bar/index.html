@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="progress-bar-container">
+        <span class="indicator">0%</span>
+        <div class="progress-bar-wrapper">
+            <div id="bar" class="progress-bar"></div>
+        </div>
+        <span class="indicator">100%</span>
+    </div>
+
+    <script>
+
+let progressBar = document.querySelector('#bar');
+let indicator = document.querySelector('.indicator');
+
+let percentage = parseInt(prompt('Write your percentage'));
+
+
+if(isNaN(percentage) || percentage < 0 || percentage > 100)
+    alert('Write a valid percentage')
+
+let color;
+if(percentage <= 20)
+color = 'red';
+else if (percentage <= 30)
+color = 'purple';
+else if (percentage <= 40)
+color = 'yellow';
+else if (percentage <= 50)
+color = 'black';
+else if (percentage <= 80)
+color = 'orangered';
+else if (percentage <= 90)
+color = 'green';
+else 
+color = 'orange';
+
+progressBar.style.backgroundColor = color;
+progressBar.style.width = `${percentage}%`;
+indicator.innerHTML = `${percentage}%`;
+
+    </script>
+</body>
+</html>
