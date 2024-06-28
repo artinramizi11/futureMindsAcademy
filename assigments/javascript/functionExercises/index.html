@@ -9,24 +9,42 @@
 
     <script>
 
-// 1. Create a function that prints "Hello World" ten times in the console
+           function printHelloWorld() {
             for(i=1; i<=10; i++) {
                 console.log('Hello World');
             }
+           } 
 
-//2. Create a function that accepts the users name and surname and then returns a string of the form "Welcome, {name} {surname}"
-            function WelcomeMessage(name,surname) {
+        //    ------------------------------------------------
+          
+           function WelcomeMessage(name,surname) {
                 return `Welcome, ${name} ${surname}`
             }
 
-            let username = prompt('Enter username');
-            let surname = prompt('Enter surname');
-
-            let message = WelcomeMessage(username, surname);
-            console.log(message);
+        //    ------------------------------------------------
 
             
-            // 6. Create a function called isWorkingCitizen which accepts the age of the user as an input and returns true or false whether the user is a working citizen or not. Remember that a working citizen is 18 years or older but younger than 65
+            function convertKilometers(kilometers) {
+                miles = kilometers * 0.6;
+                return miles;
+            }
+
+        //    ------------------------------------------------
+
+
+let radius = parseInt(prompt("Enter the radius of a circle:"));
+
+alert("The area of a circle with radius " + radius + " is " + area(radius));
+
+function area(radius){
+
+return radius * radius * Math . PI;
+
+}
+
+        //    ------------------------------------------------
+
+
 
             function isWorkingCitizen(age) {
     return age >= 18 && age < 65;
@@ -37,7 +55,9 @@ let isWorking = isWorkingCitizen(userAge);
 
 console.log(`Is the user a working citizen? ${isWorking}`); 
 
-// 7. Create a function called isEven which accepts a positive integer and ouputs true or false whether the number provided is even or not
+        //    ------------------------------------------------
+
+
 
 
 function isEven(number) {
@@ -48,10 +68,13 @@ let num1 = 6;
 let num2 = 7; 
 
 console.log(`${num1} is even? ${isEven(num1)}`); 
-console.log(`${num2} is even? ${isEven(num2)}`); i
+console.log(`${num2} is even? ${isEven(num2)}`); 
+
+        //    ------------------------------------------------
 
 
 
+ff
     </script>
     
 </body>

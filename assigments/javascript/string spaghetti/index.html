@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let string1 ='     hello, dolly!';
+        let string1toUpperCase = string1.trim().substring(0,1).toUpperCase();
+        console.log(string1);
+        console.log(string1toUpperCase)
+
+        let time =  '05:36 PM';
+        let hours = Number(time.substring(0,2));
+        let minutes = Number(time.substring(3,5));
+        let pm = time.substring(6);
+        console.log(time)
+        console.log(hours,minutes,pm)
+
+        let temperature = "New York, 15°C";
+        let temperatureCity = temperature.substring(0,8);
+        let temperatureNumber = Number(temperature.substring(10,12));
+        console.log(temperature);
+        console.log(temperatureCity, temperatureNumber)
+        
+    </script>
+    
+</body>
+</html>
