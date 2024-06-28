@@ -1,23 +1,24 @@
+
 const movieGernes = document.querySelector('.movieGernes');
 const movieList = document.querySelector('.movielist');
 const movieDetailsPage = document.querySelector('.movie-details-page');
-
+const play = document.querySelector('.play-pause');
 
 for(let i=0; i<allMovies.length; i++) {
     movieGernes.innerHTML += `
-    <option value="${i}">${allMovies[i].gerne}</option>
-    `
-}
+<option value="${i}">${allMovies[i].gerne}</option>
+`
+};
 
+loadMovies(0);
 
 function loadMovies(g) {
+    movieList.innerHTML = '';
 
     let gerneMovies = allMovies[g].movies;
-
-    movieList.innerHTML = '';
-    for(let i=0; i<gerneMovies.length; i++) {
+    for(let i=0; gerneMovies.length; i++) {
         movieList.innerHTML += `
-    <li onclick="loadMovieDetails(${g}, ${i}, this)">
+    <li onclick="loadMoviesDetails(${g}, ${i}, this)">
                             <h4>${gerneMovies[i].title}</h4>
                             <img src="assets/img/${gerneMovies[i].thumb}" alt="Plane">
                             <p class="description">${gerneMovies[i].desc}</p>
@@ -26,18 +27,15 @@ function loadMovies(g) {
                                 <div class="col m0 p0">Length: <span>${gerneMovies[i].length}</span> </div>
                             </div>
                         </li>
-    
-    
     `
-    }
 
+    }
+    
 };
 
-loadMovies(0);
-
-function loadMovieDetails(g,m,selected) {
-
+function loadMoviesDetails(g,m,selected) {
     let currentMovie = allMovies[g].movies[m];
+
     movieDetailsPage.innerHTML = `
      <h1>${currentMovie.title}</h1>
                             <h4>Date: ${currentMovie.date} | Length: ${currentMovie.length}</h4>
@@ -49,12 +47,9 @@ function loadMovieDetails(g,m,selected) {
                             <p>${currentMovie.desc}</p>
     `;
 
-    for(let i=0; i<movieList.children.length; i++) {
-        movieList.children[i].classList.remove('selected-movie');
-    };
+for(let i=0; i<allMovies[g].movies.length; i++) {
+    movieList.children[i].classList.remove('selected-movie');
+}
 
-    selected.classList.add('selected-movie');
-           
-
-
+selected.classList.add('selected-movie');
 }

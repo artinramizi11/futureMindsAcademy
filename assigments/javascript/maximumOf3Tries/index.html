@@ -11,13 +11,10 @@
     <script>
         const title = document.querySelector('.title');
       let userInput = prompt('Password');
-      let tries = 0;
+      let tries = 3;
+      let maxTries = 0;
 
-while (userInput !== '12341234') {
-    userInput = prompt('Wrong password, try again');
-    tries++;
-}
-alert('Welcome, user!');
+
 
 
 title.textContent = tries + ' tries';
