@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signup Form</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Signup Form</h2>
+    <form id="signupForm" action="#" method="POST">
+      <div class="form-control">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-control">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div id="requirements">
+        <h3>Password Requirements:</h3>
+        <p class="lengthReq">Minimum 8 characters</p>
+        <p class="lowercaseReq">At least one lowercase letter</p>
+        <p class="uppercaseReq">At least one uppercase letter</p>
+        <p class="numberReq">At least one number</p>
+        <p class="specialReq">At least one of (.,'!#)</p>
+      </div>
+      <button type="submit" id="submitBtn" disabled>Submit</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
