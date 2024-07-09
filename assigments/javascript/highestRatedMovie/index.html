@@ -4,8 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Highest Rated Movie</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+   <div class="buttons">
+    <button onclick="loadMovies('lowestToHighest')">Lowest to Highest</button>
+    <button class="moreRating" onclick="loadMovies('mostRated')">The most rated movie</button>
+   </div>
+
+    <div class="container">
+      
+    </div>
+
     <style>
         * {
             padding: 10px;
@@ -26,44 +36,8 @@
                 gap: 20px;
             }
     </style>
-
-<button class="allMovies">All</button>
-<button class="highestLowest"">Highest to Lowest</button>
-    <section class="section1">
-        <div class="movieContainer">
-            
-        </div>
-    </section>
-
-    <script src="movies.js"></script>
-    <script>
-        const section1 = document.querySelector('.section1');
-        const selectMovies = document.querySelector('.selectMovies');
-        const highestLowest = document.querySelector('.highestLowest');
-        const allMovies = document.querySelector('.allMovies')
-
-        function loadMovies(button) {
-            
-            
-          
-            section1.innerHTML = '';
-            for(let i=0; i<movies.length; i++) {
-                section1.innerHTML += `
-                <div class="movieContainer">
-            <p>Name: ${movies[i].name}</p>
-            <p>Release Year: ${movies[i].releaseYear}</p>
-            <p>Rating: ${movies[i].rating}</p>
-            <p>Main Actors: ${movies[i].mainActors}</p>
-            </div>`;
-           }
-        };
-
-       
   
-        
-
-
-    </script>
-    
+<script src="script.js"></script>  
+<script src="movies.js"></script>
 </body>
 </html>
