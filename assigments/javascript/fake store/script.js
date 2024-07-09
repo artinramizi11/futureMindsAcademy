@@ -4,7 +4,7 @@ const productDetails = document.querySelector('.productDetails')
 
 fetch('https://fakestoreapi.com/products')
     .then(res=>res.json())
-    .then(data => createProducts(data))
+    .then(data => createProducts(data)).catch(err => console.log(err))
     
 
 function createProducts(data){
@@ -31,6 +31,6 @@ function showProductId(id){
                 </div>
                 
                 `
-            });
+            }).catch(err => console.log(err));
             
 }   
