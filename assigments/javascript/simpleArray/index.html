@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <ul class="tasks">
+        </ul>
+    <script>
+
+        const tasks = document.querySelector('.tasks');
+
+        let array = [];
+        for(let i=0; i<5; i++){
+            let user = prompt('Write 5 tasks for today');
+            array.push(user);
+            tasks.innerHTML += `
+            <li>${array[i]}</li>
+            
+            `
+        
+        }
+
+
+    </script>
+    
+</body>
+</html>
