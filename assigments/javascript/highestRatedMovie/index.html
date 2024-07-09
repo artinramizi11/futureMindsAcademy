@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highest Rated Movie</title>
+</head>
+<body>
+    <style>
+        * {
+            padding: 10px;
+            margin: 0;
+        }
+
+        .movieContainer {
+            display: flex;
+            gap: 30px;
+            border: 1px solid black;
+        padding: 10px;
+            }
+
+            .section1 {
+                display: grid;
+                grid-template-columns:1fr 1fr 1fr;
+                grid-template-rows: 1fr;
+                gap: 20px;
+            }
+    </style>
+
+<button class="allMovies">All</button>
+<button class="highestLowest"">Highest to Lowest</button>
+    <section class="section1">
+        <div class="movieContainer">
+            
+        </div>
+    </section>
+
+    <script src="movies.js"></script>
+    <script>
+        const section1 = document.querySelector('.section1');
+        const selectMovies = document.querySelector('.selectMovies');
+        const highestLowest = document.querySelector('.highestLowest');
+        const allMovies = document.querySelector('.allMovies')
+
+        function loadMovies(button) {
+            
+            
+          
+            section1.innerHTML = '';
+            for(let i=0; i<movies.length; i++) {
+                section1.innerHTML += `
+                <div class="movieContainer">
+            <p>Name: ${movies[i].name}</p>
+            <p>Release Year: ${movies[i].releaseYear}</p>
+            <p>Rating: ${movies[i].rating}</p>
+            <p>Main Actors: ${movies[i].mainActors}</p>
+            </div>`;
+           }
+        };
+
+       
+  
+        
+
+
+    </script>
+    
+</body>
+</html>

@@ -9,13 +9,19 @@
     
     <script>
 
+        let notifications = ['a','b','c'];
+
         const title = document.getElementById('title');
 
         function startNotifications(text) {
             title.textContent = text;
         }
 
-        setInterval(startNotifications, 1000);
+
+        notifications.forEach(element => {
+            startNotifications(element);
+        })
+
 
     </script>
 </body>
