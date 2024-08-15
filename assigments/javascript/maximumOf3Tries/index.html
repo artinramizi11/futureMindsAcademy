@@ -2,17 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=|, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <h1 class="title">1</h1>
+<body> 
+    <h1 class="title"></h1>
 
     <script>
         const title = document.querySelector('.title');
+
+        let attempts = 3;
+        let correctPassword = 12341234;
+
+        do {
+            let user = prompt(`Enter your password, you have ${attempts} attempts`)
+            if(user == correctPassword) {
+                alert('Welcome');
+                break;
+            } else {
+                attempts--;
+            }
+        } while(attempts > 0)
     
 
 
     </script>
+    
 </body>
 </html>

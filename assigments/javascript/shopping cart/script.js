@@ -52,8 +52,6 @@ let cart = [
 const products = document.querySelector('.products');
 const totalPrice = document.querySelector('.totalPrice');
 
-console.log(totalPrice);
-
 for(let i=0; i<cart.length; i++){
     products.innerHTML += `
      <div class="product">
