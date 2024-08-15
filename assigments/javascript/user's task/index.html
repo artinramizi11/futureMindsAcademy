@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tasks for <span class="date"></span></h1>
+
+    <section class="tasks">
+
+    </section>
+    
+
+    <script>
+        const userTasks = document.querySelector('.tasks');
+        const dateTitle = document.querySelector('.date')
+
+     
+        for(let i=0; i<3; i++){
+            let user = prompt('Enter your 3 tasks for today');
+
+            userTasks.innerHTML += `
+        <h1>${user}</h1>
+        `;
+        };
+      
+        let currentDate = new Date().toJSON().slice(0,10);
+
+        dateTitle.textContent = currentDate;
+
+
+
+        
+
+    </script>
+</body>
+</html>
