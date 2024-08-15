@@ -1,16 +1,8 @@
 body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
-  }
-  
-  .circle {
-    position: fixed;
-    border-radius: 50%;
-    z-index: -1; /* move circles behind other content */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* optional: add shadow for depth */
-  }
-  
+  background: #000; /* Black background to better see the circles */
+}
+
+.circle {
+  position: fixed;
+  border-radius: 50%;
+}
