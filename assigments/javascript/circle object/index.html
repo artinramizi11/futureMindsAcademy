@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        const circle = {
+    _radius: 1,
+    _center: { x: 0, y: 0 }, 
+
+    get radius() {
+        return this._radius;
+    },
+    set radius(value) {
+        if (value > 0) {
+            this._radius = value;
+        } else {
+            console.error('Radius must be a positive number.');
+        }
+    },
+
+    get center() {
+        return this._center;
+    },
+    set center(newCenter) {
+        if (typeof newCenter === 'object' && 'x' in newCenter && 'y' in newCenter) {
+            this._center = newCenter;
+        } else {
+            console.error('Center must be an object with x and y properties.');
+        }
+    },
+
+    getArea() {
+        return Math.PI * this._radius * this._radius;
+    },
+
+    getPerimeter() {
+        return 2 * Math.PI * this._radius;
+    },
+
+    grow(amount) {
+        if (amount > 0) {
+            this._radius += amount;
+        } else {
+            console.error('Growth amount must be positive.');
+        }
+    },
+
+    shrink(amount) {
+        if (amount > 0 && this._radius - amount > 0) {
+            this._radius -= amount;
+        } else {
+            console.error('Shrink amount must be positive and result in a positive radius.');
+        }
+    },
+
+    printDetails() {
+        console.log(`Circle Details:
+        Radius: ${this._radius}
+        Center: (${this._center.x}, ${this._center.y})
+        Area: ${this.getArea()}
+        Perimeter: ${this.getPerimeter()}`);
+    }
+};
+
+
+    </script>
+</body>
+</html>
