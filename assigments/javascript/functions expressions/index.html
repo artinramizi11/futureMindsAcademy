@@ -7,7 +7,38 @@
 </head>
 <body>
     <script>
-         
+
+         const printHelloWorld = function() {
+    for (let i = 1; i <= 10; i++) {
+        console.log('Hello World');
+    }
+};
+
+printHelloWorld()
+
+
+const WelcomeMessage = function(name, surname) {
+    return console.log(`Welcome, ${name} ${surname}`);
+};
+
+WelcomeMessage('Artin','Ramizi')
+
+
+const convertKilometers = function(kilometers) {
+    const miles = kilometers * 0.621371; 
+    return console.log(miles);
+};
+
+convertKilometers(200)
+
+const isWorkingCitizen = age => console.log(age >= 18 && age < 65);
+
+isWorkingCitizen(90)
+
+const isEven = number => console.log(number % 2 === 0);
+
+isEven(101)
+
     </script>
 </body>
 </html>

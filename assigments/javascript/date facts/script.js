@@ -46,7 +46,6 @@
         try {
             const [fact1, fact2, fact3] = await Promise.all(requests);
     
-            // Display the facts
             facts.innerHTML = `
                 <p>Fact 1: ${fact1}</p>
                 <p>Fact 2: ${fact2}</p>
