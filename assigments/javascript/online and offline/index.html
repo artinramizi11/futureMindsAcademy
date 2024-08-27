@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .status {
+        background-color: gray;
+        padding: 10px;
+        color: white;
+    }
+</style>
+
+<body>
+
+    <div class="status">
+        <p class="status"></p>
+    </div>
+    
+</body>
+
+<script>
+
+    const status = document.querySelector('.status');
+
+    window.addEventListener('offline', function(){
+        status.textContent = 'You are offline, please wait until you connect again'
+    })
+
+    window.addEventListener('online', function(){
+        status.textContent = 'You are online,Welcome Back';
+        status.style.backgroundColor = 'green';
+    })
+
+</script>
+</html>
