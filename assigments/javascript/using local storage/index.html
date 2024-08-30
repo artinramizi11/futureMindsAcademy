@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        color: black;
+    }
+</style>
+<body>
+
+    <button class="btn" onclick="changeTheme()">Dark Mode</button>
+
+    <h1>First Paragraph</h1>
+    <h2>Second Paragraph</h2>
+    <h3>Third Paragraph</h3>
+    
+</body>
+
+<script>
+    const themeBtn = document.querySelector('.btn');
+    let onWhiteMode = true;
+
+let changeTheme = function(){
+    if(onWhiteMode) {
+        let bgColor = document.body.style.backgroundColor = 'white';
+        let fontColor = document.body.style.color = 'black';
+        let btnName = themeBtn.textContent = 'Dark Mode'
+        localStorage.setItem('bgColor', bgColor)
+        localStorage.setItem('fontColor', fontColor)
+        localStorage.setItem('btnName', btnName)
+        onWhiteMode = false;
+
+    } else {
+        bgColor = document.body.style.backgroundColor = 'black';
+        fontColor = document.body.style.color = 'white';
+        btnName = themeBtn.textContent = 'Light Mode'
+        localStorage.setItem('bgColor', bgColor)
+        localStorage.setItem('fontColor', fontColor)
+        localStorage.setItem('btnName', btnName)
+        onWhiteMode = true;
+
+    }
+}
+
+document.body.style.backgroundColor = localStorage.getItem('bgColor');
+document.body.style.color = localStorage.getItem('fontColor');
+themeBtn.textContent = localStorage.getItem('btnName')
+
+
+
+
+
+
+</script>
+</html>
