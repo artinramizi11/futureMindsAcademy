@@ -10,63 +10,42 @@
 
     <script>
         const circle = {
-    _radius: 1,
-    _center: { x: 0, y: 0 }, 
-
-    get radius() {
-        return this._radius;
+    radius: 1,
+    center: { x: 0, y: 0 }, 
+    getRadius: function() {
+        return this.radius;
     },
-    set radius(value) {
-        if (value > 0) {
-            this._radius = value;
-        } else {
-            console.error('Radius must be a positive number.');
+    getArea: function(){
+        return Math.PI * this.radius * this.radius;
+    },
+    getPerimeter: function(){
+        return 2 * Math.PI * this.radius;
+    },
+    getCenter: function(){
+        return this.center;
+    },
+    setCenter: function(newCenter){
+        if(typeof newCenter === 'object' && 'x' in newCenter && 'y' in newCenter){
+            this.center = newCenter
         }
     },
-
-    get center() {
-        return this._center;
-    },
-    set center(newCenter) {
-        if (typeof newCenter === 'object' && 'x' in newCenter && 'y' in newCenter) {
-            this._center = newCenter;
+    grow: function(amount){
+        if(amount > 0){
+            this.radius += amount;
+            console.log('Sucessful, Check circle radius')
         } else {
-            console.error('Center must be an object with x and y properties.');
+            console.log('Growth must be a positive number')
         }
     },
-
-    getArea() {
-        return Math.PI * this._radius * this._radius;
+    shrink: function(amount){
+       return this.radius - amount;
     },
-
-    getPerimeter() {
-        return 2 * Math.PI * this._radius;
-    },
-
-    grow(amount) {
-        if (amount > 0) {
-            this._radius += amount;
-        } else {
-            console.error('Growth amount must be positive.');
-        }
-    },
-
-    shrink(amount) {
-        if (amount > 0 && this._radius - amount > 0) {
-            this._radius -= amount;
-        } else {
-            console.error('Shrink amount must be positive and result in a positive radius.');
-        }
-    },
-
-    printDetails() {
-        console.log(`Circle Details:
-        Radius: ${this._radius}
-        Center: (${this._center.x}, ${this._center.y})
-        Area: ${this.getArea()}
-        Perimeter: ${this.getPerimeter()}`);
+    printDetails: function(){
+        console.log(`Print details: Radius: ${this.radius}, Center: ${this.center.x}, ${this.center.y}, Area: ${this.getArea()},
+        Perimeter: ${this.getPerimeter()}`)
     }
-};
+
+        }
 
 
     </script>
