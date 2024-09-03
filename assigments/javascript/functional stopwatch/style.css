@@ -1,0 +1,25 @@
+body {
+    background-color: bisque;
+}
+.laps {
+    display: flex;
+    gap: 10px;
+}
+
+.lapBtn {
+    background-color: gray;
+    padding: 1rem 4rem;
+    border: 3px solid rgb(130, 79, 79);
+}
+
+.startBtn {
+    background-color: rgba(23, 241, 110, 0.67);
+    border: 3px solid rgb(0, 0, 0);
+    padding: 1rem 4rem;
+}
+
+.stopBtn {
+    background-color: red;
+    border: 3px solid blue;
+    padding: 1rem 4rem;
+}
