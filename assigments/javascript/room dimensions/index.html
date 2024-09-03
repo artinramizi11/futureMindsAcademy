@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .room {
+        width: 300px;
+        height: 300px;
+        background-color: blue;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+    
+    }
+</style>
+<body>
+
+    <section class="room">
+        <h1>Area: <span class="areaText"></span></h1>
+        <h1>Perimeter: <span class="perimeterText"></span></h1>
+
+    </section>
+    
+
+    <script>
+
+        const areaText = document.querySelector('.areaText');
+        const perimeterText = document.querySelector('.perimeterText');
+
+        let userWidth = parseFloat(prompt('Write width on meters'));
+        let userHeight = parseFloat(prompt('Write Height on meters'));
+
+        areaText.textContent = (userWidth * userHeight)  + 'm2';
+        perimeterText.textContent = (2 * (userWidth + userHeight)) + 'm2';
+        
+        
+
+
+    </script>
+</body>
+</html>
